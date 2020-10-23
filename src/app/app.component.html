@@ -1,0 +1,15 @@
+
+<input type="text" [(ngModel)]="term">
+
+<table class="table">
+  <thead>
+  <tr>
+    <th *ngFor="let head of finalobject  | keyvalue" (click)="changeOrder(head.key)">{{head.key}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of finalData |filter:term | orderBy: order">
+    <td *ngFor="let recipient of data | keyvalue">{{recipient.value}}</td>
+  </tr>
+  </tbody>
+</table>
