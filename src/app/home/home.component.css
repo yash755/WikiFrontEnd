@@ -1,0 +1,164 @@
+hr {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid gray;
+}
+
+.author__description {
+  text-align:left;
+  font-size: 1.5rem;
+}
+
+.tile__description {
+  margin-top: 20px;
+  text-align:left;
+  font-size: 1.75rem;
+}
+
+.base__description {
+  margin-top: 15px;
+  text-align:left;
+  font-size: 1.25rem;
+}
+.tile{
+
+  padding: 3rem;
+}
+.tile__box{
+
+  height:100%;
+
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+
+  position: relative;
+  z-index: 2;
+}
+/*.tile__box:hover ::before {
+  content: "";
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+!*  background-color: rgba(255, 255, 255, 0.03);*!
+  !*    background-color: white;*!
+  width: 100%;
+  z-index: 1;
+}*/
+
+.tile__heading{
+  z-index: 3;
+  color: #336699;
+  font-size: 2.5rem;
+  text-align: left;
+  padding-bottom: 5px;
+}
+.tile_image{
+  /*    position: absolute;*/
+  /*    left: 50%;*/
+  /*    transform: translateX(-50%);*/
+  padding-top: 20px;
+  height: 70%;
+  align-content: center;
+}
+.tile_image img{
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+}
+.tile__box--3{
+  background-color: #a305c4;
+}
+.tile__box--2{
+  background-color: #4a44db;
+}
+.tile__box--1{
+  background-color: #6EC1E4;
+}
+.tile__box--4{
+  background-color: #0093A6;
+}
+.tile__box--5{
+  background-color: #FF6D6D;
+}
+.tile__box--6{
+  background-color: #0C6AC7;
+}
+
+.tile--more{
+  color: black;
+  font-size: 2rem;
+  text-align: right;
+}
+
+
+.fa-stack {
+  height: 2.5rem;
+  line-height: 1.5em;
+}
+
+
+.btn {
+  font-size: 12px;
+}
+
+/*a {
+  color: black;
+}*/
+
+a:hover{
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 991px) {
+  .filter-term {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .filter-term-mobile {
+
+    display: none;
+  }
+}
+
+
+.tile__box__category {
+  height: 100%;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+tile__heading_category {
+  z-index: 3;
+  color: #336699;
+  font-size: 2.5rem;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+
+.form-control {
+  height: 44px;
+}
+
+@media screen and (max-width: 425px) {
+  .ad {
+    padding-top: 10px;
+    margin-left: -1.5rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .ad {
+    display: none;
+  }
+}

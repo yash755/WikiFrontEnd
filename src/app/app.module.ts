@@ -8,10 +8,16 @@ import { OrderModule } from 'ngx-order-pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

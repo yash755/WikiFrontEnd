@@ -1,0 +1,41 @@
+<div style="background-color: #f5f5f5; padding-bottom: 20px">
+  <div class="container">
+    <h2>URLs - {{url}}</h2>
+    <hr/>
+    <div class="row">
+      <div class="col-md-12 col-lg-12" >
+        <div class="col-md-12 col-lg-12">
+          <div style="padding: 1.5rem">
+            <input class="form-control filter-term-mobile" type="text" placeholder="Filter the results..." aria-label="Search" [(ngModel)]="term">
+
+          </div>
+        </div>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th *ngFor="let head of finalobject  | keyvalue" (click)="changeOrder(head.key)">{{head.key}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of finalData |filter:term | orderBy: order">
+    <td *ngFor="let recipient of data | keyvalue">{{recipient.value}}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+
+

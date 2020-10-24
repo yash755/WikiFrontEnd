@@ -1,0 +1,32 @@
+.navbar {
+  background-color:   rgba(7, 91, 152, 0.82);
+  border-color:   rgba(7, 91, 152, 0.82);
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+
+a {
+  color: white;
+}
+
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+  }
+}
+
+
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+  background-color: transparent;
+}
