@@ -9,7 +9,7 @@ import {UrlService} from '../service/url.service';
   providers: [UrlService]
 })
 export class DetailComponent implements OnInit {
-  url = '';
+  url = -1;
   term = '';
   order = '';
   finalData;
