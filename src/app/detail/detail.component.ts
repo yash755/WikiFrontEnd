@@ -53,9 +53,7 @@ export class DetailComponent implements OnInit {
     }
     this.finalobject = this.finalData[index];
     this.keys = Object.keys(this.finalobject);
-    console.log(this.keys);
     this.order = Object.keys(this.finalobject)[0];
-    console.log(this.finalData);
   }
 
   public changeOrder(key){
