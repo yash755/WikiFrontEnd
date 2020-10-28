@@ -14,6 +14,8 @@ export class DetailComponent implements OnInit {
   order = '';
   finalData;
   finalobject;
+  title = '';
+  urls = [];
 
   keys;
 
@@ -24,8 +26,26 @@ export class DetailComponent implements OnInit {
       (params: Params) => {
         if (params.url) {
           this.url = params.url;
-          this.fetchData();
+          this.fetchURL();
         }
+      });
+  }
+
+
+  public fetchURL() {
+    this.urlService.getURLS()
+      .subscribe(data => {
+        this.urls = data;
+        for (let i = 0; i < this.urls.length; i++) {
+          if (this.urls[i].id == this.url) {
+            console.log(this.urls[i].id);
+            this.title = this.urls[i].title;
+            break;
+          }
+        }
+        this.fetchData();
+      }, (err) => {
+        console.log(err);
       });
   }
 
