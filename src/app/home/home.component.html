@@ -7,7 +7,7 @@
 
         <div *ngFor="let url of urls" style="padding: 1.5rem">
           <div class="tile__box">
-            <div class="tile__heading"><a [routerLink]="['/detail', url.id]">{{url.url}}</a></div>
+            <div class="tile__heading"><a [routerLink]="['/detail', url.id]">{{url.title}} <br> ({{url.url}})</a></div>
 
           </div>
         </div>

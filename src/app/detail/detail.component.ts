@@ -13,7 +13,9 @@ export class DetailComponent implements OnInit {
   term = '';
   order = '';
   finalData;
-  finalobject = [];
+  finalobject;
+
+  keys;
 
   constructor(private activatedRoute: ActivatedRoute, private urlService: UrlService) { }
 
@@ -32,7 +34,6 @@ export class DetailComponent implements OnInit {
     this.urlService.getDetailedData(body)
       .subscribe(data => {
         this.finalData = data;
-        console.log(this.finalData);
         this.calData();
       }, (err) => {
         console.log(err);
@@ -45,14 +46,16 @@ export class DetailComponent implements OnInit {
     let index = -1;
     for (let i = 0 ; i < this.finalData.length; i++) {
       const len = Object.keys(this.finalData[i]).length;
-      console.log(len);
       if (len > max){
         max = len;
         index = i;
       }
     }
     this.finalobject = this.finalData[index];
+    this.keys = Object.keys(this.finalobject);
+    console.log(this.keys);
     this.order = Object.keys(this.finalobject)[0];
+    console.log(this.finalData);
   }
 
   public changeOrder(key){
