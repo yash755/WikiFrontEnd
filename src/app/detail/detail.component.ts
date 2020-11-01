@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {UrlService} from '../service/url.service';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-detail',
@@ -19,9 +20,10 @@ export class DetailComponent implements OnInit {
 
   keys;
 
-  constructor(private activatedRoute: ActivatedRoute, private urlService: UrlService) { }
+  constructor(private activatedRoute: ActivatedRoute, private urlService: UrlService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
+    this.spinner.show();
     this.activatedRoute.params.subscribe(
       (params: Params) => {
         if (params.url) {
@@ -74,6 +76,8 @@ export class DetailComponent implements OnInit {
     this.finalobject = this.finalData[index];
     this.keys = Object.keys(this.finalobject);
     this.order = Object.keys(this.finalobject)[0];
+
+    this.spinner.hide();
   }
 
   public changeOrder(key){

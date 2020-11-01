@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UrlService} from '../service/url.service';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   urls = [];
 
-  constructor(private urlService: UrlService) { }
+  constructor(private urlService: UrlService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.fetchURL();
@@ -19,9 +20,11 @@ export class HomeComponent implements OnInit {
 
 
   public fetchURL() {
+    this.spinner.show();
     this.urlService.getURLS()
       .subscribe(data => {
         this.urls = data;
+        this.spinner.hide();
       }, (err) => {
         console.log(err);
       });

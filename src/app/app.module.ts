@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderModule } from 'ngx-order-pipe';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { DetailComponent } from './detail/detail.component';
     AppRoutingModule,
     Ng2SearchPipeModule,
     OrderModule,
+    NgxSpinnerModule,
     HttpClientModule,
     FormsModule
   ],
