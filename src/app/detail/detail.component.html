@@ -18,7 +18,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let data of finalData |filter:term | orderBy: order">
-    <td *ngFor="let head of keys ; let i=index"><div innerHTML="{{data[keys[i]]}}"></div></td>
+    <td *ngFor="let head of keys  | keyvalue"><div innerHTML="{{data[head.value]}}"></div></td>
   </tr>
   </tbody>
 </table>
