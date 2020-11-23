@@ -1,0 +1,27 @@
+<div style="background-color: #f5f5f5; padding-bottom: 20px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12" >
+        <h3 style="padding-top: 1.5rem">{{title}}</h3>
+        <div class="col-md-12 col-lg-12">
+
+          <form [formGroup]="urlForm">
+            <div class="form-group" [ngClass]="{'has-error': urlForm.controls.url.valid == false && urlForm.controls.url.touched}">
+              <label for="discussion-text-box">Post URL:</label>
+              <input class="form-control rounded-0" id="discussion-text-box" formControlName="url" />
+              <app-field-error-display [displayError]="isCommentFieldValid('url')" errorMsg="Please enter valid URL.">
+              </app-field-error-display>
+            </div>
+            <input type="submit" value="Post" class="btn btn-primary btn-comment" (click)="submitComment()">
+          </form>
+
+<!--          <div style="padding: 1.5rem">-->
+<!--            <input class="form-control filter-term-mobile" type="text" placeholder="Enter URL to fetch data from..." aria-label="Search" [(ngModel)]="term">-->
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

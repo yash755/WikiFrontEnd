@@ -29,4 +29,17 @@ export class UrlService {
     return this.http.post<any>(storyURL, JSON.stringify(data), httpOptions);
   }
 
+
+  postURL(data): Observable<any> {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+      })
+    };
+
+    const postURL = global.BASE_URL + global.POST_URL;
+    return this.http.post<any>(postURL, JSON.stringify(data), httpOptions);
+  }
+
 }

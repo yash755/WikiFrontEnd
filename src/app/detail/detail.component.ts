@@ -40,7 +40,7 @@ export class DetailComponent implements OnInit {
         this.urls = data;
         for (let i = 0; i < this.urls.length; i++) {
           if (this.urls[i].id == this.url) {
-            console.log(this.urls[i].id);
+            /*console.log(this.urls[i].id);*/
             this.title = this.urls[i].title;
             break;
           }
